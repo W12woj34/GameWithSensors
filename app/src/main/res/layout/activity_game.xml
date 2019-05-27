@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent" android:id="@+id/gameLayout">
+
+    <TextView
+            android:text="Hygiene:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8" app:layout_constraintStart_toStartOf="@+id/guideline3"
+            android:layout_marginStart="8dp"
+            android:textSize="20sp"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/funGameButton"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hygieneLevel"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/funGameButton"/>
+    <Button
+            android:text="Go shower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/healthGameButton"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintHorizontal_bias="0.619"/>
+    <Button
+            android:text="Go play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/funGameButton"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView7"/>
+    <TextView
+            android:text="Fun:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7" app:layout_constraintStart_toStartOf="@+id/guideline3"
+            android:layout_marginStart="8dp" android:layout_marginTop="24dp"
+            android:textSize="20sp" app:layout_constraintTop_toBottomOf="@+id/toiletGameButton"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/funLevel"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            android:layout_marginStart="8dp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/toiletGameButton"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toiletLevel"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/drinkLevel"
+            android:textSize="20sp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/foodGameButton"
+            app:layout_constraintStart_toEndOf="@+id/textView3" android:layout_marginStart="8dp"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline2"
+            app:layout_constraintGuide_percent="0.25"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline3"
+            app:layout_constraintGuide_percent="0.76"/>
+    <TextView
+            android:text="Sleep:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:textSize="20sp"/>
+    <TextView
+            android:text="Food:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:textSize="20sp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/sleepGameButton"/>
+    <TextView
+            android:text="Drink:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:textSize="20sp"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/foodGameButton"/>
+    <TextView
+            android:text="Toilet:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4" app:layout_constraintStart_toStartOf="@+id/guideline3"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20sp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sleepLevel" app:layout_constraintStart_toEndOf="@+id/textView"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20sp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodLevel" app:layout_constraintStart_toEndOf="@+id/textView2"
+            android:layout_marginStart="4dp"
+            android:textSize="20sp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/sleepGameButton"/>
+    <Button
+            android:text="Go sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sleepGameButton" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            android:layout_marginEnd="8dp"/>
+    <Button
+            android:text="Go to toilet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toiletGameButton"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+    <Button
+            android:text="Go eat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodGameButton" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            android:layout_marginEnd="8dp"/>
+    <Button
+            android:text="Go drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/drinkGameButton"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" tools:srcCompat="@drawable/ordinaryZuber"
+            android:id="@+id/bizonGameImage"
+            app:layout_constraintStart_toStartOf="@+id/guideline2" app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/infoGameLabel" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="1.0" android:layout_marginTop="8dp" android:scaleType="fitXY"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/infoGameLabel" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="@+id/guideline2"
+            android:layout_marginStart="8dp" tools:text="Just ordinary zuber"
+            android:textSize="18sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
