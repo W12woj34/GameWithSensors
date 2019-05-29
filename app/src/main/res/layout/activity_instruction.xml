@@ -12,7 +12,7 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:textSize="30sp"/>
     <TextView
-            android:text="You cannot let zuber die! To do it you have to meet his needs by clicking on adequatue buttons. Zuber die when one of his status levels drop to 0. "
+            android:text="You cannot let zuber die! To do it you have to meet his needs by clicking on adequatue buttons. Zuber die when one of his status levels drop to 0. Remember that zuber sleep well only if its dark, and before zober go wash himself you nead to shake phone."
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView9" android:layout_marginTop="8dp"

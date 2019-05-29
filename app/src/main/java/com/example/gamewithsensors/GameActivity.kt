@@ -1,20 +1,43 @@
 package com.example.gamewithsensors
 
+import android.content.Context
 import android.graphics.Color
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_game.*
+import java.io.IOException
+import com.squareup.seismic.ShakeDetector
 
 
-class GameActivity : AppCompatActivity() {
+
+
+class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Listener {
+
     private val zubr = Bizon(70, 70, 70, 70, 70, 70)
+    private lateinit var sensorManager: SensorManager
+    private var light: Sensor? = null
+    private var shake: ShakeDetector? = null
+    private var isDark = false
+    private var isShake = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
         bizonGameImage.setImageResource(R.drawable.ordinary_zuber)
 
+        this.sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
+        shake = ShakeDetector(this)
+        sensorManager.registerListener(this, light, SensorManager.SENSOR_DELAY_GAME)
+        shake!!.start(sensorManager)
+
+
+        retryGameButton.visibility = View.GONE
         inicializeGame()
         sleepGameButton.setOnClickListener {
             sleepGameButtonOnClickListener()
@@ -45,10 +68,40 @@ class GameActivity : AppCompatActivity() {
         }
     }
 
+    override fun hearShake() {
+        isShake = true
+    }
+
+    override fun onSensorChanged(event: SensorEvent?) = try {
+        isDark = event!!.values[0] < 60 && !isDark
+    } catch (e: IOException) {
+    }
+
+
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) = Unit
+
+    override fun onResume() {
+        super.onResume()
+        sensorManager.registerListener(this, light, SensorManager.SENSOR_DELAY_GAME)
+        shake!!.start(sensorManager)
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        sensorManager.unregisterListener(this)
+        shake!!.stop()
+    }
+
+
     private fun sleepGameButtonOnClickListener() {
         disableButtons()
-        infoGameLabel.text = "Cover light sensor!"
-        zubr.sleep(true)
+        zubr.sleep(isDark)
+        if( isDark){
+            infoGameLabel.text = "Zuber slept well that night"
+        }else{
+            infoGameLabel.text = "It wasn't a night to remember"
+        }
         bizonGameImage.setImageResource(R.drawable.zubr_sleep)
         inicializeGame()
     }
@@ -57,6 +110,7 @@ class GameActivity : AppCompatActivity() {
         disableButtons()
         zubr.eat()
         bizonGameImage.setImageResource(R.drawable.zubr_food)
+        infoGameLabel.text = "What can Zuber eat? Maybe carbonara?"
         inicializeGame()
     }
 
@@ -64,6 +118,7 @@ class GameActivity : AppCompatActivity() {
         disableButtons()
         zubr.drink()
         bizonGameImage.setImageResource(R.drawable.zubr_drink)
+        infoGameLabel.text = "Not so thirsty zuber, at least for now"
         inicializeGame()
     }
 
@@ -71,6 +126,7 @@ class GameActivity : AppCompatActivity() {
         disableButtons()
         zubr.toilet()
         bizonGameImage.setImageResource(R.drawable.zubr_toilet)
+        infoGameLabel.text = "Zuber feels 2kg lighter"
         inicializeGame()
     }
 
@@ -78,13 +134,18 @@ class GameActivity : AppCompatActivity() {
         disableButtons()
         zubr.play()
         bizonGameImage.setImageResource(R.drawable.zubr_play)
+        infoGameLabel.text = "Zuber is happy, just like after databases"
         inicializeGame()
     }
 
     private fun hygieneGameButtonOnClickListener() {
         disableButtons()
-        infoGameLabel.text = "Shake!"
-        zubr.wash(true)
+        zubr.wash(isShake)
+        if(isShake){
+            infoGameLabel.text = "Zuber is clean and perfumed"
+        }else{
+            infoGameLabel.text = "Zuber is a bit smelly"
+        }
         bizonGameImage.setImageResource(R.drawable.zubr_wash)
         inicializeGame()
     }
@@ -98,7 +159,7 @@ class GameActivity : AppCompatActivity() {
     private fun resetBison() {
         zubr.reset()
         bizonGameImage.setImageResource(R.drawable.ordinary_zuber)
-        infoGameLabel.text = "Just ordinary zuber"
+        infoGameLabel.text = "Just ordinary Zuber"
         retryGameButton.visibility = View.GONE
         inicializeGame()
     }
@@ -117,13 +178,13 @@ class GameActivity : AppCompatActivity() {
         funLevel.setTextColor(Color.parseColor(chooseColor(zubr.getPlay())))
         hygieneLevel.text = zubr.getHygiene().toString()
         hygieneLevel.setTextColor(Color.parseColor(chooseColor(zubr.getHygiene())))
+        isShake = false
 
         if (zubr.idDead()) {
             infoGameLabel.text = "ZUBER DEAD!"
             retryGameButton.visibility = View.VISIBLE
             bizonGameImage.setImageResource(R.drawable.zubr_dead)
         } else {
-            infoGameLabel.text = "Just ordinary zuber"
             enableButtons()
 
         }
