@@ -7,72 +7,72 @@
                                                    android:layout_height="match_parent" android:id="@+id/gameLayout">
 
     <TextView
-            android:text="Hygiene:"
+            android:text="@string/GWS_HYGIENE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView8" app:layout_constraintStart_toStartOf="@+id/guideline3"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN"
             android:textSize="20sp"
-            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/funGameButton"/>
+            android:layout_marginTop="@dimen/GWS_BIG_MARGIN" app:layout_constraintTop_toBottomOf="@+id/funGameButton"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/GWS_PLACEHOLDER_TEXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/hygieneLevel"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/textView8"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/funGameButton"/>
+            android:layout_marginStart="@dimen/GWS_HALF_MARGIN"
+            android:layout_marginTop="@dimen/GWS_BIG_MARGIN" app:layout_constraintTop_toBottomOf="@+id/funGameButton"/>
     <Button
-            android:text="Go shower"
+            android:text="@string/GWS_HYGIENE_BUTTON"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/hygieneGameButton"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView8"
-            app:layout_constraintHorizontal_bias="0.619"/>
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/GWS_STANDARD_MARGIN"
+            android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintHorizontal_bias="0.5"/>
     <Button
-            android:text="Go play"
+            android:text="@string/GWS_PLAY_BUTTON"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/funGameButton"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView7"/>
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/GWS_STANDARD_MARGIN"
+            android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintTop_toBottomOf="@+id/textView7"/>
     <TextView
-            android:text="Fun:"
+            android:text="@string/GWS_PLAY"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView7" app:layout_constraintStart_toStartOf="@+id/guideline3"
-            android:layout_marginStart="8dp" android:layout_marginTop="24dp"
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" android:layout_marginTop="@dimen/GWS_BIG_MARGIN"
             android:textSize="20sp" app:layout_constraintTop_toBottomOf="@+id/toiletGameButton"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/GWS_PLACEHOLDER_TEXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/funLevel"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/textView7"
-            android:layout_marginStart="8dp" android:layout_marginTop="24dp"
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" android:layout_marginTop="@dimen/GWS_BIG_MARGIN"
             app:layout_constraintTop_toBottomOf="@+id/toiletGameButton"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/GWS_PLACEHOLDER_TEXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/toiletLevel"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/textView4"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintTop_toTopOf="parent"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/GWS_PLACEHOLDER_TEXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/drinkLevel"
             android:textSize="20sp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/GWS_BIG_MARGIN"
             app:layout_constraintTop_toBottomOf="@+id/foodGameButton"
-            app:layout_constraintStart_toEndOf="@+id/textView3" android:layout_marginStart="8dp"/>
+            app:layout_constraintStart_toEndOf="@+id/textView3" android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN"/>
     <androidx.constraintlayout.widget.Guideline
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -82,108 +82,109 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/guideline3"
-            app:layout_constraintGuide_percent="0.76"/>
+            app:layout_constraintGuide_percent="0.75"/>
     <TextView
-            android:text="Sleep:"
+            android:text="@string/GWS_SLEEP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:textSize="20sp"/>
+            android:id="@+id/textView" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN"
+            android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintTop_toTopOf="parent" android:textSize="20sp"/>
     <TextView
-            android:text="Food:"
+            android:text="@string/GWS_FOOD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:textSize="20sp" android:layout_marginTop="24dp"
+            android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN"
+            android:textSize="20sp" android:layout_marginTop="@dimen/GWS_BIG_MARGIN"
             app:layout_constraintTop_toBottomOf="@+id/sleepGameButton"/>
     <TextView
-            android:text="Drink:"
+            android:text="@string/GWS_DRINK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:id="@+id/textView3" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN"
             android:textSize="20sp"
-            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/foodGameButton"/>
+            android:layout_marginTop="@dimen/GWS_BIG_MARGIN" app:layout_constraintTop_toBottomOf="@+id/foodGameButton"/>
     <TextView
-            android:text="Toilet:"
+            android:text="@string/GWS_TOILET"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView4" app:layout_constraintStart_toStartOf="@+id/guideline3"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintTop_toTopOf="parent"
             android:textSize="20sp"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/GWS_PLACEHOLDER_TEXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sleepLevel" app:layout_constraintStart_toEndOf="@+id/textView"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintTop_toTopOf="parent"
             android:textSize="20sp"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/GWS_PLACEHOLDER_TEXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/foodLevel" app:layout_constraintStart_toEndOf="@+id/textView2"
-            android:layout_marginStart="4dp"
-            android:textSize="20sp" android:layout_marginTop="24dp"
+            android:layout_marginStart="@dimen/GWS_HALF_MARGIN"
+            android:textSize="20sp" android:layout_marginTop="@dimen/GWS_BIG_MARGIN"
             app:layout_constraintTop_toBottomOf="@+id/sleepGameButton"/>
     <Button
-            android:text="Go sleep"
+            android:text="@string/GWS_SLEEP_BUTTON"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/sleepGameButton" android:layout_marginTop="8dp"
+            android:id="@+id/sleepGameButton" android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN"
             app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            android:layout_marginEnd="@dimen/GWS_STANDARD_MARGIN"/>
     <Button
-            android:text="Go to toilet"
+            android:text="@string/GWS_TOILET_BUTTON"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/toiletGameButton"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/GWS_STANDARD_MARGIN"
+            android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintTop_toBottomOf="@+id/textView4"/>
     <Button
-            android:text="Go eat"
+            android:text="@string/GWS_FOOD_BUTTON"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/foodGameButton" android:layout_marginTop="8dp"
+            android:id="@+id/foodGameButton" android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN"
             app:layout_constraintTop_toBottomOf="@+id/textView2" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            android:layout_marginEnd="@dimen/GWS_STANDARD_MARGIN"/>
     <Button
-            android:text="Go drink"
+            android:text="@string/GWS_DRINK_BUTTON"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/drinkGameButton"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            android:layout_marginEnd="@dimen/GWS_STANDARD_MARGIN" android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN"
             app:layout_constraintTop_toBottomOf="@+id/textView3"/>
     <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="@dimen/GWS_MATCH_CONSTRAINT"
+            android:layout_height="@dimen/GWS_MATCH_CONSTRAINT"
             android:id="@+id/bizonGameImage"
             app:layout_constraintStart_toStartOf="@+id/guideline2" app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/infoGameLabel" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="1.0" android:layout_marginTop="8dp" android:scaleType="fitXY"
-            app:srcCompat="@drawable/ordinary_zuber" tools:srcCompat="@drawable/ordinary_zuber"/>
+            app:layout_constraintVertical_bias="1.0" android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN" android:scaleType="fitXY"
+            app:srcCompat="@drawable/ordinary_zuber" tools:srcCompat="@drawable/ordinary_zuber"
+            android:contentDescription="@string/GWS_MAIN_IMG_DESC"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/infoGameLabel" android:layout_marginTop="8dp"
+            android:id="@+id/infoGameLabel" android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="@+id/guideline2"
-            android:layout_marginStart="8dp" tools:text="Just ordinary zuber"
+            android:layout_marginEnd="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintStart_toStartOf="@+id/guideline2"
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" tools:text="Just ordinary zuber"
             android:textSize="18sp"/>
     <Button
-            android:text="Retry"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:text="@string/GWS_RETRY_BUTTON"
+            android:layout_width="@dimen/GWS_MATCH_CONSTRAINT"
+            android:layout_height="@dimen/GWS_MATCH_CONSTRAINT"
             android:id="@+id/retryGameButton"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/GWS_STANDARD_MARGIN"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/infoGameLabel" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/infoGameLabel" android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN"
             app:layout_constraintHorizontal_bias="1.0" tools:text="Retry"
             app:layout_constraintBottom_toTopOf="@+id/bizonGameImage"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

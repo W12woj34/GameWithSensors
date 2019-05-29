@@ -73,7 +73,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
     }
 
     override fun onSensorChanged(event: SensorEvent?) = try {
-        isDark = event!!.values[0] < 60 && !isDark
+        isDark = event!!.values[0] < 65 && !isDark
     } catch (e: IOException) {
     }
 
@@ -98,9 +98,9 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
         disableButtons()
         zubr.sleep(isDark)
         if( isDark){
-            infoGameLabel.text = "Zuber slept well that night"
+            infoGameLabel.text = getString(R.string.GWS_SLEEP_GOOD_TEXT)
         }else{
-            infoGameLabel.text = "It wasn't a night to remember"
+            infoGameLabel.text = getString(R.string.GWS_SLEEP_BAD_TEXT)
         }
         bizonGameImage.setImageResource(R.drawable.zubr_sleep)
         inicializeGame()
@@ -110,7 +110,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
         disableButtons()
         zubr.eat()
         bizonGameImage.setImageResource(R.drawable.zubr_food)
-        infoGameLabel.text = "What can Zuber eat? Maybe carbonara?"
+        infoGameLabel.text = getString(R.string.GWS_EAT_TEXT)
         inicializeGame()
     }
 
@@ -118,7 +118,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
         disableButtons()
         zubr.drink()
         bizonGameImage.setImageResource(R.drawable.zubr_drink)
-        infoGameLabel.text = "Not so thirsty zuber, at least for now"
+        infoGameLabel.text = getString(R.string.GWS_DRINK_TEXT)
         inicializeGame()
     }
 
@@ -126,7 +126,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
         disableButtons()
         zubr.toilet()
         bizonGameImage.setImageResource(R.drawable.zubr_toilet)
-        infoGameLabel.text = "Zuber feels 2kg lighter"
+        infoGameLabel.text = getString(R.string.GWS_TOILET_TEXT)
         inicializeGame()
     }
 
@@ -134,7 +134,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
         disableButtons()
         zubr.play()
         bizonGameImage.setImageResource(R.drawable.zubr_play)
-        infoGameLabel.text = "Zuber is happy, just like after databases"
+        infoGameLabel.text = getString(R.string.GWS_FUN_TEXT)
         inicializeGame()
     }
 
@@ -142,9 +142,9 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
         disableButtons()
         zubr.wash(isShake)
         if(isShake){
-            infoGameLabel.text = "Zuber is clean and perfumed"
+            infoGameLabel.text = getString(R.string.GWS_SHOWER_GOOD_TEXT)
         }else{
-            infoGameLabel.text = "Zuber is a bit smelly"
+            infoGameLabel.text = getString(R.string.GWS_SHOWER_BAD_TEXT)
         }
         bizonGameImage.setImageResource(R.drawable.zubr_wash)
         inicializeGame()
@@ -159,7 +159,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
     private fun resetBison() {
         zubr.reset()
         bizonGameImage.setImageResource(R.drawable.ordinary_zuber)
-        infoGameLabel.text = "Just ordinary Zuber"
+        infoGameLabel.text = getString(R.string.GWS_STANDARD_TEXT)
         retryGameButton.visibility = View.GONE
         inicializeGame()
     }
@@ -181,7 +181,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
         isShake = false
 
         if (zubr.idDead()) {
-            infoGameLabel.text = "ZUBER DEAD!"
+            infoGameLabel.text = getString(R.string.GWS_GAME_OVER_TEXT)
             retryGameButton.visibility = View.VISIBLE
             bizonGameImage.setImageResource(R.drawable.zubr_dead)
         } else {
@@ -210,11 +210,11 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
 
     private fun chooseColor(value: Int): String {
         return when {
-            value > 90 -> "#39ff14"
-            value > 70 -> "#0B6623"
-            value > 40 -> "#FFD300"
-            value > 15 -> "#DE1738"
-            else -> "#070C0F"
+            value > 90 -> getString(R.string.GWS_COLOR_FOREST)
+            value > 70 -> getString(R.string.GWS_COLOR_NEON)
+            value > 40 -> getString(R.string.GWS_COLOR_CYBER)
+            value > 15 -> getString(R.string.GWS_COLOR_RED)
+            else -> getString(R.string.GWS_COLOR_BLACK)
         }
 
     }

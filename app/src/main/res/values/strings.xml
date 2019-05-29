@@ -1,4 +1,34 @@
 <resources>
     <string name="app_name">Game with sensors</string>
     <string name="action_settings">Settings</string>
+    <string name="GWS_SLEEP_GOOD_TEXT">Zuber slept well that night</string>
+    <string name="GWS_SLEEP_BAD_TEXT">It wasn\'t a night to remember</string>
+    <string name="GWS_EAT_TEXT">What can Zuber eat? Maybe carbonara?</string>
+    <string name="GWS_DRINK_TEXT">Not so thirsty zuber, at least for now</string>
+    <string name="GWS_TOILET_TEXT">Zuber feels 2kg lighter</string>
+    <string name="GWS_FUN_TEXT">Zuber is happy, just like after databases</string>
+    <string name="GWS_SHOWER_GOOD_TEXT">Zuber is clean and perfumed</string>
+    <string name="GWS_SHOWER_BAD_TEXT">Zuber is a bit smelly</string>
+    <string name="GWS_STANDARD_TEXT">Just ordinary Zuber</string>
+    <string name="GWS_GAME_OVER_TEXT">ZUBER DEAD!</string>
+    <string name="GWS_COLOR_FOREST">#39ff14</string>
+    <string name="GWS_COLOR_NEON">#0B6623</string>
+    <string name="GWS_COLOR_CYBER">#FFD300</string>
+    <string name="GWS_COLOR_RED">#DE1738</string>
+    <string name="GWS_COLOR_BLACK">#070C0F</string>
+    <string name="GWS_HYGIENE">Hygiene:</string>
+    <string name="GWS_HYGIENE_BUTTON">Go shower</string>
+    <string name="GWS_PLAY_BUTTON">Go play</string>
+    <string name="GWS_PLAY">Fun:</string>
+    <string name="GWS_SLEEP">Sleep:</string>
+    <string name="GWS_FOOD">Food:</string>
+    <string name="GWS_DRINK">Drink:</string>
+    <string name="GWS_TOILET">Toilet:</string>
+    <string name="GWS_SLEEP_BUTTON">Go sleep</string>
+    <string name="GWS_TOILET_BUTTON">Go to toilet</string>
+    <string name="GWS_FOOD_BUTTON">Go eat</string>
+    <string name="GWS_DRINK_BUTTON">Go drink</string>
+    <string name="GWS_RETRY_BUTTON">Retry</string>
+    <string name="GWS_PLACEHOLDER_TEXT">TextView</string>
+    <string name="GWS_MAIN_IMG_DESC">Main bizon image</string>
 </resources>
