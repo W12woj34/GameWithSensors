@@ -27,7 +27,7 @@
             android:text="Go shower"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/healthGameButton"
+            android:id="@+id/hygieneGameButton"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView8"
@@ -160,12 +160,13 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3"/>
     <ImageView
             android:layout_width="0dp"
-            android:layout_height="0dp" tools:srcCompat="@drawable/ordinaryZuber"
+            android:layout_height="0dp"
             android:id="@+id/bizonGameImage"
             app:layout_constraintStart_toStartOf="@+id/guideline2" app:layout_constraintEnd_toStartOf="@+id/guideline3"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/infoGameLabel" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="1.0" android:layout_marginTop="8dp" android:scaleType="fitXY"/>
+            app:layout_constraintVertical_bias="1.0" android:layout_marginTop="8dp" android:scaleType="fitXY"
+            app:srcCompat="@drawable/ordinary_zuber" tools:srcCompat="@drawable/ordinary_zuber"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -174,4 +175,15 @@
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="@+id/guideline2"
             android:layout_marginStart="8dp" tools:text="Just ordinary zuber"
             android:textSize="18sp"/>
+    <Button
+            android:text="Retry"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/retryGameButton"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            android:layout_marginEnd="8dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/infoGameLabel" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="1.0" tools:text="Retry"
+            app:layout_constraintBottom_toTopOf="@+id/bizonGameImage"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

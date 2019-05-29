@@ -1,7 +1,9 @@
 package com.example.gamewithsensors
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -9,7 +11,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        startGameButton.setOnClickListener {
+            startGameButtonOnClickListener()
+        }
+
+        howToPlayButton.setOnClickListener {
+            howToPlayButtonOnClickListener()
+        }
+
+        exitButton.setOnClickListener {
+            exitButtonOnClickListener()
+        }
+
     }
 
+    private fun startGameButtonOnClickListener(){
+        val intent = Intent(this, GameActivity::class.java)
+        startActivity(intent)
+    }
 
+    private fun howToPlayButtonOnClickListener(){
+        val intent = Intent(this, InstructionActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun exitButtonOnClickListener(){
+        finish()
+        System.exit(0)
+    }
 }
