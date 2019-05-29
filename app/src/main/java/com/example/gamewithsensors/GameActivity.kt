@@ -73,7 +73,10 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
     }
 
     override fun onSensorChanged(event: SensorEvent?) = try {
-        isDark = event!!.values[0] < 70 && !isDark
+        if (event!!.values[0] <= 30 && !isDark) {
+            isDark = true
+        } else {
+        }
     } catch (e: IOException) {
     }
 
@@ -179,6 +182,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
         hygieneLevel.text = zubr.getHygiene().toString()
         hygieneLevel.setTextColor(Color.parseColor(chooseColor(zubr.getHygiene())))
         isShake = false
+        isDark = false
 
         if (zubr.idDead()) {
             infoGameLabel.text = getString(R.string.GWS_GAME_OVER_TEXT)
