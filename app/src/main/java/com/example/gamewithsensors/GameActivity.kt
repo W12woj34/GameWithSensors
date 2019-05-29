@@ -73,7 +73,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
     }
 
     override fun onSensorChanged(event: SensorEvent?) = try {
-        isDark = event!!.values[0] < 65 && !isDark
+        isDark = event!!.values[0] < 70 && !isDark
     } catch (e: IOException) {
     }
 
