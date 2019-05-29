@@ -31,4 +31,12 @@
     <string name="GWS_RETRY_BUTTON">Retry</string>
     <string name="GWS_PLACEHOLDER_TEXT">TextView</string>
     <string name="GWS_MAIN_IMG_DESC">Main bizon image</string>
+    <string name="GWS_GAME_INSTRUCTION">You cannot let zuber die! To do it you have to meet his needs by clicking on
+        adequatue buttons. Zuber die when one of his status levels drop to 0. Remember that zuber sleep well only if its
+        dark, and before zober go wash himself you nead to shake phone.
+    </string>
+    <string name="GWS_HOW_TO_PLAY">How to play</string>
+    <string name="GWS_START_GAME">Start Game</string>
+    <string name="GWS_MENU_BACKGROUND">Main menu background</string>
+    <string name="GWS_EXIT_BUTTON">Exit</string>
 </resources>

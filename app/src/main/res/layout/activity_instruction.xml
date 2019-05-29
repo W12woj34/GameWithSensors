@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"  android:orientation="vertical"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
                                                    android:id="@+id/instructionLayout">
     <TextView
-            android:text="How to play"
+            android:text="@string/GWS_HOW_TO_PLAY"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView6" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            android:id="@+id/textView6" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/GWS_STANDARD_MARGIN" android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN"
             app:layout_constraintTop_toTopOf="parent" android:textSize="30sp"/>
     <TextView
-            android:text="You cannot let zuber die! To do it you have to meet his needs by clicking on adequatue buttons. Zuber die when one of his status levels drop to 0. Remember that zuber sleep well only if its dark, and before zober go wash himself you nead to shake phone."
-            android:layout_width="0dp"
+            android:text="@string/GWS_GAME_INSTRUCTION"
+            android:layout_width="@dimen/GWS_MATCH_CONSTRAINT"
             android:layout_height="wrap_content"
-            android:id="@+id/textView9" android:layout_marginTop="8dp"
+            android:id="@+id/textView9" android:layout_marginTop="@dimen/GWS_STANDARD_MARGIN"
             app:layout_constraintTop_toBottomOf="@+id/textView6" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="@dimen/GWS_STANDARD_MARGIN" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/GWS_STANDARD_MARGIN"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
