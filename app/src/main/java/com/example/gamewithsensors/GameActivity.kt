@@ -8,6 +8,7 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_game.*
 import java.io.IOException
@@ -109,6 +110,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
             infoGameLabel.text = getString(R.string.GWS_SLEEP_GOOD_TEXT)
         } else {
             infoGameLabel.text = getString(R.string.GWS_SLEEP_BAD_TEXT)
+            Toast.makeText(this, getString(R.string.GWS_TOAST_SLEEP_FAIL),Toast.LENGTH_SHORT).show()
         }
         bizonGameImage.setImageResource(R.drawable.zubr_sleep)
         inicializeGame()
@@ -153,6 +155,7 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
             infoGameLabel.text = getString(R.string.GWS_SHOWER_GOOD_TEXT)
         } else {
             infoGameLabel.text = getString(R.string.GWS_SHOWER_BAD_TEXT)
+            Toast.makeText(this, getString(R.string.GWS_TOAST_HYGIENE_FAIL),Toast.LENGTH_SHORT).show()
         }
         bizonGameImage.setImageResource(R.drawable.zubr_wash)
         inicializeGame()

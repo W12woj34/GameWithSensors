@@ -39,4 +39,6 @@
     <string name="GWS_START_GAME">Start Game</string>
     <string name="GWS_MENU_BACKGROUND">Main menu background</string>
     <string name="GWS_EXIT_BUTTON">Exit</string>
+    <string name="GWS_TOAST_HYGIENE_FAIL">Next time try to shake your phone first</string>
+    <string name="GWS_TOAST_SLEEP_FAIL">Next time try to cover light sensor first</string>
 </resources>
