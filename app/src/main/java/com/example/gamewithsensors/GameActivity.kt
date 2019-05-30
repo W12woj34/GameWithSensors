@@ -14,8 +14,6 @@ import java.io.IOException
 import com.squareup.seismic.ShakeDetector
 
 
-
-
 class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Listener {
 
     private val zubr = Bizon(70, 70, 70, 70, 70, 70)
@@ -29,6 +27,13 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
         bizonGameImage.setImageResource(R.drawable.ordinary_zuber)
+        infoGameLabel.text = getString(R.string.GWS_STANDARD_TEXT)
+
+        window.decorView.apply {
+            systemUiVisibility =
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        }
+
 
         this.sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
@@ -100,9 +105,9 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
     private fun sleepGameButtonOnClickListener() {
         disableButtons()
         zubr.sleep(isDark)
-        if( isDark){
+        if (isDark) {
             infoGameLabel.text = getString(R.string.GWS_SLEEP_GOOD_TEXT)
-        }else{
+        } else {
             infoGameLabel.text = getString(R.string.GWS_SLEEP_BAD_TEXT)
         }
         bizonGameImage.setImageResource(R.drawable.zubr_sleep)
@@ -144,9 +149,9 @@ class GameActivity : AppCompatActivity(), SensorEventListener, ShakeDetector.Lis
     private fun hygieneGameButtonOnClickListener() {
         disableButtons()
         zubr.wash(isShake)
-        if(isShake){
+        if (isShake) {
             infoGameLabel.text = getString(R.string.GWS_SHOWER_GOOD_TEXT)
-        }else{
+        } else {
             infoGameLabel.text = getString(R.string.GWS_SHOWER_BAD_TEXT)
         }
         bizonGameImage.setImageResource(R.drawable.zubr_wash)
